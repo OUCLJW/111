@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>System Info</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $.getJSON('/os/info', function (osInfo) {
+                // 在页面上填充 osInfo 数据
+            });
+
+            $.getJSON('/os/status', function (systemStatus) {
+                // 在页面上填充 systemStatus 数据
+            });
+        });
+    </script>
+</head>
+<body>
+<h1>System Information</h1>
+<div id="os-info">
+    <!-- OS info will be displayed here -->
+</div>
+<div id="system-status">
+    <!-- System status will be displayed here -->
+</div>
+</body>
+</html>
